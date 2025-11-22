@@ -244,6 +244,10 @@ body>* {
     align-items: center;
 }
 
+.hamburger {
+    display: none;
+}
+
 .nav-brand {
     font-size: 1.5rem;
     font-weight: 700;
@@ -1252,84 +1256,109 @@ h2.animated::after {
 /* Responsive Design - Premium Mobile Experience */
 @media (max-width: 768px) {
 
-    /* Mobile Navigation - Bottom App Bar Style */
+    /* Mobile Navigation - Hamburger Style */
+    .navbar {
+        display: block;
+        /* Show navbar on mobile */
+        padding: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--primary-color);
+        border-radius: 2px;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     .nav-menu {
-        display: flex;
         position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        padding: 0.8rem 0.5rem;
-        justify-content: space-around;
-        align-items: center;
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
-        z-index: 1000;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        left: -100%;
+        top: 70px;
+        /* Adjust based on navbar height */
         gap: 0;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        border-bottom: 1px solid var(--border-color);
+        height: auto;
+        bottom: auto;
+        /* Reset bottom property */
+        justify-content: flex-start;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border-top: none;
+    }
+
+    .nav-menu.active {
+        left: 0;
     }
 
     .nav-menu li {
-        flex: 1;
-        display: flex;
-        justify-content: center;
+        margin: 1rem 0;
+        display: block;
+        /* Reset flex */
     }
 
     .nav-menu a {
-        font-size: 0.75rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-        padding: 0.5rem;
-        color: var(--text-light);
-        font-weight: 600;
-        /* Better visibility */
-    }
-
-    .nav-menu a.active,
-    .nav-menu a:hover {
-        color: var(--accent-blue);
-        transform: translateY(-2px);
-        background-color: rgba(37, 99, 235, 0.05);
-        /* Touch feedback */
-        border-radius: 8px;
-    }
-
-    .nav-menu a::after {
-        display: none;
-        /* Remove underline for bottom nav */
-    }
-
-    /* Floating Action Button (CTA) */
-    .nav-cta {
-        position: fixed;
-        bottom: 90px;
-        /* Above bottom nav */
-        right: 20px;
-        z-index: 1001;
-        padding: 1rem 1.5rem !important;
-        border-radius: 50px;
-        box-shadow: 0 10px 30px rgba(255, 107, 0, 0.4) !important;
-        font-size: 0.9rem;
-        animation: float 4s ease-in-out infinite;
-        display: flex !important;
-        align-items: center;
+        font-size: 1.1rem;
+        flex-direction: row;
+        /* Reset flex direction */
         justify-content: center;
-        margin: 0 !important;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        color: var(--text-color);
     }
 
-    /* Hide Language Switcher in Header on Mobile */
+    .nav-menu a:hover {
+        color: var(--primary-color);
+        background-color: transparent;
+        transform: none;
+    }
+
+    /* Hide language switcher in header on mobile, keep in footer */
     .navbar .language-switcher {
         display: none;
     }
 
-    /* Hide the top navigation bar completely on mobile */
-    .navbar {
-        display: none;
+    /* Adjust CTA for mobile menu */
+    .nav-cta {
+        display: none !important;
+        /* Hide CTA in navbar on mobile, maybe add to menu? */
     }
+
+    /* Add CTA to mobile menu if needed, or keep floating */
+    /* For now, let's keep the floating CTA but adjust position if needed */
+    /* Actually, let's hide the floating CTA and rely on the menu links */
+
+    /* Re-enable CTA in menu if we want */
+
 
     /* Hero Section - Mobile Optimized */
     .hero {
