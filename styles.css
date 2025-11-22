@@ -5,34 +5,45 @@
 }
 
 :root {
-    /* Core Colors - WebMarketers.ca inspired */
-    --primary-color: #0B132B;
-    /* Deep Dark Blue */
+    /* Core Colors - Proxify Inspired */
+    --primary-color: #147e5b;
+    /* Proxify Green */
     --secondary-color: #ffffff;
-    --text-color: #334155;
-    /* Slate Grey for body text */
-    --text-light: #94a3b8;
+    --hero-bg: #15172f;
+    /* Dark Blue Hero Background */
+    --text-color: #15172f;
+    /* Dark Blue Text */
+    --text-light: #525f7f;
+    /* Muted Blue/Grey */
     --bg-color: #ffffff;
-    --bg-secondary: #f8fafc;
-    /* Light grey for alternate sections */
+    --bg-secondary: #f6f9fc;
+    /* Very Light Grey */
 
     /* Accents */
-    --accent-color: #FF6B00;
-    /* Vibrant Orange for CTAs */
-    --accent-hover: #e65100;
-    /* Darker Orange for hover */
-    --accent-blue: #3b82f6;
-    /* Keep for tech accents if needed */
+    --accent-color: #147e5b;
+    /* Proxify Green */
+    --accent-hover: #147e5b;
+    /* Darker Green */
+    --accent-blue: #147e5b;
+    /* Replaced Blue with Green for consistency */
+    --accent-blue-light: #e6f8f2;
+    /* Light Green */
 
     /* Borders & Shadows */
-    --border-color: #e2e8f0;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --border-color: #e6e9f0;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 20px rgba(0, 184, 122, 0.2);
 
-    --animation-duration: 0.4s;
-    --animation-easing: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 0.3s;
+    --animation-easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --radius-btn: 8px;
+    /* Proxify Button Radius */
 }
 
 html {
@@ -43,7 +54,7 @@ html {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
 
     to {
@@ -167,13 +178,38 @@ html {
     animation: scaleIn var(--animation-duration) var(--animation-easing) forwards;
 }
 
+/* Focus Accessibility */
+:focus-visible {
+    outline: 3px solid var(--accent-blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Link Accessibility */
+a {
+    text-decoration-skip-ink: auto;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
     font-size: 16px;
+    /* Reset to standard size for Poppins */
     position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    color: var(--text-color);
 }
 
 
@@ -190,13 +226,14 @@ body>* {
 
 /* Navigation */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 1.2rem 0;
+    padding: 1rem 0;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
 }
@@ -255,33 +292,38 @@ body>* {
 
 .lang-btn {
     background: transparent;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    padding: 0;
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
     transition: all 0.3s ease;
-    transform: scale(1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+}
+
+.lang-btn svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .lang-btn:hover {
-    background-color: var(--accent-blue);
-    border-color: var(--accent-blue);
-    color: var(--secondary-color);
-    transform: scale(1.05);
-    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.25);
-    border-radius: 6px;
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .lang-btn.active {
-    background-color: var(--accent-blue);
-    border-color: var(--accent-blue);
-    color: var(--secondary-color);
-    transform: scale(1.05);
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+    border-color: var(--primary-color);
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Hero Section */
@@ -291,11 +333,12 @@ body>* {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 6rem 0;
+    border-bottom: none;
     position: relative;
     overflow: hidden;
-    background-color: var(--bg-color);
+    background-color: var(--hero-bg);
+    color: white;
 }
 
 .hero::before {
@@ -342,19 +385,15 @@ body>* {
 }
 
 .hero h1 {
-    font-size: 4rem;
-    font-weight: 800;
+    font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    color: white;
     animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1);
     position: relative;
     z-index: 1;
-    letter-spacing: -0.03em;
-    text-shadow: 0 2px 10px var(--shadow-light);
-    background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 .hero h1::after {
@@ -382,9 +421,8 @@ body>* {
 
 .hero-subtitle {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
-    color: var(--text-color);
-    opacity: 0.8;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -392,27 +430,24 @@ body>* {
     position: relative;
     z-index: 1;
     font-weight: 400;
-    letter-spacing: 0.01em;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .btn-primary {
     display: inline-block;
-    padding: 1.1rem 2.8rem;
-    background-color: var(--accent-color);
+    padding: 1rem 2rem;
+    background: var(--accent-color);
     color: white;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
     border: none;
-    border-radius: 50px;
-    /* Pill shape */
-    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border-radius: var(--radius-btn);
+    transition: all 0.2s ease;
     position: relative;
     overflow: hidden;
     animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.4s both;
     z-index: 1;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 184, 122, 0.2);
 }
 
 .btn-primary::before {
@@ -438,7 +473,7 @@ body>* {
 .btn-primary:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+    box-shadow: 0 6px 12px rgba(0, 184, 122, 0.3);
 }
 
 /* Sections */
@@ -609,21 +644,21 @@ h2.animated::after {
 
 .project-card {
     border: 1px solid var(--border-color);
-    padding: 2.5rem;
-    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    padding: 2rem;
+    transition: all 0.4s var(--animation-easing);
     background-color: var(--secondary-color);
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(20px);
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
 }
 
 .project-card:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-blue-light);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
     z-index: 2;
 }
 
@@ -783,20 +818,20 @@ h2.animated::after {
     border: 1px solid var(--border-color);
     padding: 3rem 2rem;
     background-color: var(--secondary-color);
-    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: all 0.4s var(--animation-easing);
     text-align: center;
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(20px);
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
 }
 
 .creative-card:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-blue-light);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
 }
 
 .creative-card.animated {
@@ -805,10 +840,16 @@ h2.animated::after {
 }
 
 .creative-icon {
-    font-size: 3.5rem;
     margin-bottom: 1.5rem;
     display: inline-block;
     transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: var(--primary-color);
+}
+
+.creative-icon svg {
+    width: 48px;
+    height: 48px;
+    stroke-width: 1.5;
 }
 
 .creative-card:hover .creative-icon {
@@ -964,15 +1005,16 @@ h2.animated::after {
 }
 
 .skill-category {
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
     padding: 2rem;
     background-color: var(--secondary-color);
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
 }
 
 .skill-category::before {
@@ -1168,34 +1210,37 @@ h2.animated::after {
 
 .lang-btn-footer {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--secondary-color);
-    padding: 0.3rem 0.6rem;
+    border: 2px solid transparent;
+    padding: 0;
     cursor: pointer;
-    font-size: 0.75rem;
-    font-weight: 400;
-    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    overflow: hidden;
     transition: all 0.3s ease;
-    transform: scale(1);
-    opacity: 0.7;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-btn-footer svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .lang-btn-footer:hover,
 .lang-btn-footer:active,
 .lang-btn-footer:focus {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.1);
 }
 
 .lang-btn-footer.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.8);
     opacity: 1;
-    font-weight: 500;
+    transform: scale(1.1);
 }
 
 /* Footer language switcher always visible */
@@ -1240,13 +1285,17 @@ h2.animated::after {
         gap: 4px;
         padding: 0.5rem;
         color: var(--text-light);
-        font-weight: 500;
+        font-weight: 600;
+        /* Better visibility */
     }
 
     .nav-menu a.active,
     .nav-menu a:hover {
-        color: var(--accent-color);
+        color: var(--accent-blue);
         transform: translateY(-2px);
+        background-color: rgba(37, 99, 235, 0.05);
+        /* Touch feedback */
+        border-radius: 8px;
     }
 
     .nav-menu a::after {
@@ -1293,9 +1342,11 @@ h2.animated::after {
     }
 
     .hero h1 {
-        font-size: 2.8rem;
-        line-height: 1.1;
-        margin-bottom: 1.2rem;
+        font-size: 2.5rem;
+        /* Prevent overflow */
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
     }
 
     .hero-subtitle {
