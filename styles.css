@@ -1529,9 +1529,7 @@ h2.animated::after {
     direction: rtl;
 }
 
-[dir="rtl"] .nav-menu {
-    flex-direction: row-reverse;
-}
+
 
 [dir="rtl"] .language-switcher {
     flex-direction: row-reverse;
