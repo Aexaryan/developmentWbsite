@@ -1,0 +1,140 @@
+/* Device Mockups */
+.mockup-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    perspective: 1000px;
+}
+
+/* Laptop Mockup */
+.mockup-laptop {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.mockup-laptop:hover {
+    transform: rotateX(2deg) rotateY(2deg);
+}
+
+.laptop-screen {
+    background: #121212;
+    border-radius: 12px 12px 0 0;
+    padding: 3%;
+    position: relative;
+    box-shadow: 0 0 0 2px #2a2a2a;
+    border: 1px solid #333;
+}
+
+.laptop-screen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.laptop-base {
+    background: #1e1e1e;
+    height: 16px;
+    border-radius: 0 0 12px 12px;
+    position: relative;
+    margin-top: -1px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.laptop-base::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15%;
+    height: 6px;
+    background: #2a2a2a;
+    border-radius: 0 0 6px 6px;
+}
+
+/* Mobile Mockup */
+.mockup-mobile {
+    position: relative;
+    width: 280px;
+    height: 580px;
+    background: #121212;
+    border-radius: 36px;
+    border: 8px solid #2a2a2a;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    margin: 0 auto;
+}
+
+.mobile-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 24px;
+    background: #2a2a2a;
+    border-radius: 0 0 12px 12px;
+    z-index: 2;
+}
+
+.mobile-screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+}
+
+.mobile-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tablet Mockup */
+.mockup-tablet {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 4/3;
+    background: #121212;
+    border-radius: 24px;
+    border: 12px solid #2a2a2a;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+.tablet-camera {
+    position: absolute;
+    top: 6px;
+    /* Inside the border area effectively */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.tablet-screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.tablet-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

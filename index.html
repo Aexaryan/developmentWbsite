@@ -35,6 +35,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mockups.css">
 
     <script type="application/ld+json">
     {
@@ -150,6 +151,15 @@
                 <p class="hero-subtitle" data-i18n="hero.subtitle">Building modern web and mobile applications with
                     cutting-edge technologies</p>
                 <a href="#projects" class="btn-primary" data-i18n="hero.cta">View Our Work</a>
+
+                <div class="mockup-container" style="margin-top: 4rem;">
+                    <div class="mockup-laptop">
+                        <div class="laptop-screen">
+                            <img src="images/screens/screen-code.png" alt="Code Editor">
+                        </div>
+                        <div class="laptop-base"></div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -175,7 +185,15 @@
             <div class="container">
                 <h2 data-i18n="projects.title">Projects</h2>
                 <div class="projects-grid">
+                    <!-- Project 1: SMS Gateway (Mobile) -->
                     <article class="project-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <div class="mockup-mobile"
+                            style="transform: scale(0.8); margin-bottom: -2rem; margin-top: -2rem;">
+                            <div class="mobile-notch"></div>
+                            <div class="mobile-screen">
+                                <img src="images/screens/screen-mobile.png" alt="SMS Gateway App">
+                            </div>
+                        </div>
                         <h3 itemprop="name" data-i18n="project1.title">SMS Gateway Android App</h3>
                         <p class="project-tech" itemprop="applicationCategory">Kotlin • Android Studio</p>
                         <p itemprop="description" data-i18n="project1.description">A robust SMS gateway application
@@ -190,26 +208,39 @@
                         </div>
                     </article>
 
+                    <!-- Project 2: Smart Mechanic (Web) -->
                     <article class="project-card" itemscope itemtype="https://schema.org/WebApplication">
+                        <div class="mockup-laptop" style="margin-bottom: 2rem;">
+                            <div class="laptop-screen">
+                                <img src="images/screens/Mikano-app.png" alt="Smart Mechanic Platform">
+                            </div>
+                            <div class="laptop-base"></div>
+                        </div>
                         <h3 itemprop="name" data-i18n="project2.title">Smart Mechanic Roadside Assistance</h3>
                         <p class="project-tech" itemprop="applicationCategory">React • Cloudflare Workers (Serverless) •
                             Node.js</p>
                         <p itemprop="description" data-i18n="project2.description">A smart roadside assistance platform
                             with an offer management system for mechanics who own mechanic shops. Built with React
                             frontend, available in two backend versions: Cloudflare Workers (Serverless) for edge
-                            computing and Node.js for traditional architecture. Enables mechanics to manage offers and
-                            provide roadside assistance services efficiently.</p>
+                            computing and Node.js for traditional architecture.</p>
                         <meta itemprop="browserRequirements" content="Requires JavaScript. Requires HTML5.">
                         <meta itemprop="programmingLanguage" content="JavaScript, React, Node.js">
                         <div class="project-tags">
                             <span>React</span>
-                            <span>Cloudflare Workers (Serverless)</span>
+                            <span>Cloudflare Workers</span>
                             <span>Node.js</span>
                             <span>Full Stack</span>
                         </div>
                     </article>
 
+                    <!-- Project 3: Film Production (Web) -->
                     <article class="project-card" itemscope itemtype="https://schema.org/WebApplication">
+                        <div class="mockup-laptop" style="margin-bottom: 2rem;">
+                            <div class="laptop-screen">
+                                <img src="images/screens/film-industy-platfrom.png" alt="Film Production Management">
+                            </div>
+                            <div class="laptop-base"></div>
+                        </div>
                         <h3 itemprop="name" data-i18n="project3.title">Film Production Management</h3>
                         <p class="project-tech" itemprop="applicationCategory">React • Cloudflare Workers (Serverless)
                         </p>
@@ -221,38 +252,51 @@
                         <meta itemprop="programmingLanguage" content="JavaScript, React">
                         <div class="project-tags">
                             <span>React</span>
-                            <span>Cloudflare Workers (Serverless)</span>
+                            <span>Cloudflare Workers</span>
                             <span>Project Management</span>
                         </div>
                     </article>
 
+                    <!-- Project 4: Taxi Offer (Web) -->
                     <article class="project-card" itemscope itemtype="https://schema.org/WebApplication">
+                        <div class="mockup-laptop" style="margin-bottom: 2rem;">
+                            <div class="laptop-screen">
+                                <img src="images/screens/taxi-Platfron.png" alt="Taxi Offer Platform">
+                            </div>
+                            <div class="laptop-base"></div>
+                        </div>
                         <h3 itemprop="name" data-i18n="project4.title">Taxi Offer Platform</h3>
                         <p class="project-tech" itemprop="applicationCategory">React • Cloudflare Workers (Serverless) •
                             Node.js</p>
                         <p itemprop="description" data-i18n="project4.description">A taxi service platform with offer
                             management capabilities. Built with React frontend and available in two backend
                             implementations: Cloudflare Workers (Serverless) for edge computing and Node.js for
-                            traditional architecture. Enables efficient ride booking and offer management.</p>
+                            traditional architecture.</p>
                         <meta itemprop="browserRequirements" content="Requires JavaScript. Requires HTML5.">
                         <meta itemprop="programmingLanguage" content="JavaScript, React, Node.js">
                         <div class="project-tags">
                             <span>React</span>
-                            <span>Cloudflare Workers (Serverless)</span>
+                            <span>Cloudflare Workers</span>
                             <span>Node.js</span>
                             <span>Full Stack</span>
                         </div>
                     </article>
 
+                    <!-- Project 5: SEO Websites (Web) -->
                     <article class="project-card" itemscope itemtype="https://schema.org/WebSite">
+                        <div class="mockup-laptop" style="margin-bottom: 2rem;">
+                            <div class="laptop-screen">
+                                <img src="images/screens/screen-code.png" alt="SEO Optimized Websites">
+                            </div>
+                            <div class="laptop-base"></div>
+                        </div>
                         <h3 itemprop="name" data-i18n="project5.title">Professional SEO-Optimized HTML Websites</h3>
                         <p class="project-tech" itemprop="applicationCategory">HTML5 • CSS3 • JavaScript • SEO • AEO •
                             LLM</p>
                         <p itemprop="description" data-i18n="project5.description">Professional HTML websites fully
                             optimized for SEO, AEO (Answer Engine Optimization), and LLM (Large Language Model)
-                            optimization. Built with semantic HTML5, comprehensive structured data (Schema.org), FAQ
-                            sections, and technical SEO best practices. Designed to achieve top Google organic search
-                            rankings without requiring expensive hosting solutions.</p>
+                            optimization. Built with semantic HTML5, comprehensive structured data (Schema.org), and
+                            technical SEO best practices.</p>
                         <meta itemprop="browserRequirements" content="Requires HTML5. Works with all modern browsers.">
                         <meta itemprop="programmingLanguage" content="HTML, CSS, JavaScript">
                         <div class="project-tags">
@@ -260,55 +304,58 @@
                             <span>SEO</span>
                             <span>AEO</span>
                             <span>LLM Optimization</span>
-                            <span>Structured Data</span>
                         </div>
                     </article>
 
+                    <!-- Project 6: Film Networking (Web) -->
                     <article class="project-card" itemscope itemtype="https://schema.org/WebApplication">
+                        <div class="mockup-laptop" style="margin-bottom: 2rem;">
+                            <div class="laptop-screen">
+                                <img src="images/screens/casting-platfrom.png" alt="Film Networking Platform">
+                            </div>
+                            <div class="laptop-base"></div>
+                        </div>
                         <h3 itemprop="name" data-i18n="project6.title">Film Industry Networking Platform</h3>
                         <p class="project-tech" itemprop="applicationCategory">MERN Stack • React • Node.js • Express •
                             MongoDB</p>
                         <p itemprop="description" data-i18n="project6.description">A professional networking platform
                             for the film industry connecting directors, actors, producers, and film professionals. Users
-                            can showcase their portfolio and work samples, connect with industry peers, collaborate on
-                            projects, and discover job opportunities. Built with the MERN stack (MongoDB, Express,
-                            React, Node.js) providing a robust, scalable solution for the film community to network,
-                            collaborate, and advance their careers.</p>
+                            can showcase their portfolio, connect with peers, and discover job opportunities.</p>
                         <meta itemprop="browserRequirements" content="Requires JavaScript. Requires HTML5.">
                         <meta itemprop="programmingLanguage" content="JavaScript, React, Node.js, MongoDB">
                         <div class="project-tags">
                             <span>React</span>
                             <span>Node.js</span>
                             <span>MongoDB</span>
-                            <span>Express</span>
                             <span>MERN Stack</span>
-                            <span>Full Stack</span>
                         </div>
                     </article>
 
-                    <article class="project-card" itemscope itemtype="https://schema.org/WebApplication">
+                    <!-- Project 7: Limit Edge (Web) -->
+                    <!-- <article class="project-card" itemscope itemtype="https://schema.org/WebApplication">
+                        <div class="mockup-laptop" style="margin-bottom: 2rem;">
+                            <div class="laptop-screen">
+                                <img src="images/screens/screen-dashboard.png" alt="Limit Edge Administration">
+                            </div>
+                            <div class="laptop-base"></div>
+                        </div>
                         <h3 itemprop="name" data-i18n="project7.title">Limit Edge Reality Show Administration Platform
                         </h3>
                         <p class="project-tech" itemprop="applicationCategory">HTML5 • CSS3 • React • Cloudflare Workers
-                            (Serverless) • Production Management</p>
+                        </p>
                         <p itemprop="description" data-i18n="project7.description">A comprehensive administration
-                            platform for the Limit Edge reality show from PersianRealityShowTv on YouTube. Features
-                            include production management, budget planning, and complete business plan management. Built
-                            with HTML and CSS for the main website, along with a professional web application developed
-                            with React frontend and Cloudflare Workers (Serverless) backend for managing applicants and
-                            participants. Provides complete administrative control over all aspects of the reality show
-                            production.</p>
+                            platform for the Limit Edge reality show. Features include production management, budget
+                            planning, and complete business plan management. Built with HTML/CSS and React/Cloudflare
+                            Workers.</p>
                         <meta itemprop="browserRequirements" content="Requires JavaScript. Requires HTML5.">
                         <meta itemprop="programmingLanguage" content="HTML, CSS, JavaScript, React">
                         <div class="project-tags">
                             <span>HTML5</span>
-                            <span>CSS3</span>
                             <span>React</span>
-                            <span>Cloudflare Workers (Serverless)</span>
-                            <span>Web Application</span>
+                            <span>Cloudflare Workers</span>
                             <span>Production Management</span>
                         </div>
-                    </article>
+                    </article> -->
                 </div>
             </div>
         </section>
@@ -320,74 +367,70 @@
                     branding services to elevate your brand identity.</p>
 
                 <div class="creative-grid">
+                    <!-- Video Production: Laptop Mockup with YouTube -->
                     <article class="creative-card">
-                        <div class="creative-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-video">
-                                <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                            </svg>
+                        <div class="mockup-laptop" style="margin-bottom: 2rem;">
+                            <div class="laptop-screen">
+                                <a href="https://www.youtube.com/watch?v=6tBEKRqE9Iw" target="_blank"
+                                    rel="noopener noreferrer"
+                                    style="display: block; position: relative; width: 100%; height: 100%;">
+                                    <img src="https://img.youtube.com/vi/6tBEKRqE9Iw/maxresdefault.jpg"
+                                        alt="Video Production Demo"
+                                        style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                    <div
+                                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(255, 0, 0, 0.9); border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.3s;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white"
+                                            style="margin-left: 3px;">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="laptop-base"></div>
                         </div>
                         <h3 data-i18n="creative.video.title">Professional Commercial Video Production</h3>
                         <p data-i18n="creative.video.description">High-quality commercial video production services for
-                            advertising campaigns, promotional content, and brand storytelling. From concept to final
-                            delivery, we create engaging video content that captures your audience's attention and
-                            drives results.</p>
+                            advertising campaigns, promotional content, and brand storytelling.</p>
                         <ul class="creative-features">
                             <li data-i18n="creative.video.feature1">Commercial Video Production</li>
                             <li data-i18n="creative.video.feature2">Advertising Campaigns</li>
                             <li data-i18n="creative.video.feature3">Promotional Content</li>
-                            <li data-i18n="creative.video.feature4">Brand Storytelling</li>
-                            <li data-i18n="creative.video.feature5">Video Editing & Post-Production</li>
                         </ul>
                     </article>
 
-                    <article class="creative-card">
-                        <div class="creative-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-pen-tool">
-                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                                <path d="M2 2l7.586 7.586"></path>
-                                <circle cx="11" cy="11" r="2"></circle>
-                            </svg>
+                    <!-- Graphic Design: Tablet Mockup -->
+                    <article class="project-card">
+                        <div class="mockup-tablet" style="margin-bottom: 2rem;">
+                            <div class="tablet-camera"></div>
+                            <div class="tablet-screen">
+                                <img src="images/screens/screen-graphic-design.png" alt="Graphic Design Portfolio">
+                            </div>
                         </div>
                         <h3 data-i18n="creative.logo.title">Graphic Design</h3>
                         <p data-i18n="creative.logo.description">Comprehensive graphic design services for all your
-                            visual needs. From logos and brand identity to marketing materials, social media graphics,
-                            print design, and digital assets. We create visually stunning designs that effectively
-                            communicate your message and enhance your brand presence.</p>
+                            visual needs. From logos and brand identity to marketing materials.</p>
                         <ul class="creative-features">
                             <li data-i18n="creative.logo.feature1">Logo & Brand Identity Design</li>
                             <li data-i18n="creative.logo.feature2">Marketing Materials</li>
                             <li data-i18n="creative.logo.feature3">Social Media Graphics</li>
-                            <li data-i18n="creative.logo.feature4">Print & Digital Design</li>
-                            <li data-i18n="creative.logo.feature5">Vector Graphics & Illustrations</li>
                         </ul>
                     </article>
 
-                    <article class="creative-card">
-                        <div class="creative-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-star">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                </polygon>
-                            </svg>
+                    <!-- Branding: Tablet Mockup -->
+                    <article class="project-card">
+                        <div class="mockup-tablet" style="margin-bottom: 2rem;">
+                            <div class="tablet-camera"></div>
+                            <div class="tablet-screen">
+                                <img src="images/screens/screen-branding.png" alt="Branding Portfolio">
+                            </div>
                         </div>
                         <h3 data-i18n="creative.branding.title">Branding & Visual Identity</h3>
                         <p data-i18n="creative.branding.description">Comprehensive branding services to establish a
-                            strong visual identity for your business. From brand strategy to complete visual identity
-                            systems, we help you create a cohesive brand that resonates with your audience.</p>
+                            strong visual identity for your business.</p>
                         <ul class="creative-features">
                             <li data-i18n="creative.branding.feature1">Brand Strategy</li>
                             <li data-i18n="creative.branding.feature2">Visual Identity Design</li>
                             <li data-i18n="creative.branding.feature3">Brand Guidelines</li>
-                            <li data-i18n="creative.branding.feature4">Graphic Design</li>
-                            <li data-i18n="creative.branding.feature5">Brand Assets</li>
                         </ul>
                     </article>
                 </div>
@@ -429,12 +472,13 @@
                         <h3 data-i18n="skills.other">Other</h3>
                         <ul>
                             <li>SEO Optimization</li>
-                            <li>Performance Optimization</li>
-                            <li>Version Control (Git)</li>
-                            <li>Full Stack Development</li>
+                            <li>Git / Version Control</li>
+                            <li>Agile / Scrum</li>
+                            <li>Problem Solving</li>
                         </ul>
                     </div>
                 </div>
+
             </div>
         </section>
 
