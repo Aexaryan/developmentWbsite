@@ -73,8 +73,10 @@ const translations = {
         'contact.phone.canada.number': '+1 705 970 0443',
         'contact.phone.sweden.label': 'Sweden Phone:',
         'contact.phone.sweden.number': '+46 70 645 42 11',
+        'contact.linkedin': 'Connect on LinkedIn',
+        'contact.role': 'Full Stack Developer',
         'contact.available': 'Available for new projects',
-        'footer.text': '© 2024 Full Stack Developer Portfolio. All rights reserved.'
+        'footer.text': '© 2024 Arya Tech. All rights reserved.'
     },
     fa: {
         'nav.home': 'خانه',
@@ -150,8 +152,10 @@ const translations = {
         'contact.phone.canada.number': '+1 705 970 0443',
         'contact.phone.sweden.label': 'تلفن (سوئد):',
         'contact.phone.sweden.number': '+46 70 645 42 11',
+        'contact.linkedin': 'ارتباط در لینکدین',
+        'contact.role': 'توسعه‌دهنده فول استک',
         'contact.available': 'منتظر شنیدن نظرات و ایده‌های شما هستیم.',
-        'footer.text': '© 2024 پورتفولیو توسعه‌دهنده فول استک. کلیه حقوق محفوظ است.'
+        'footer.text': '© 2024 Arya Tech. کلیه حقوق محفوظ است.'
     },
     sv: {
         'nav.home': 'Hem',
@@ -229,8 +233,10 @@ const translations = {
         'contact.phone.canada.number': '+1 705 970 0443',
         'contact.phone.sweden.label': 'Sverige Telefon:',
         'contact.phone.sweden.number': '+46 70 645 42 11',
+        'contact.linkedin': 'Anslut på LinkedIn',
+        'contact.role': 'Full Stack Utvecklare',
         'contact.available': 'Tillgänglig för nya projekt',
-        'footer.text': '© 2024 Full Stack Utvecklare Portfolio. Alla rättigheter förbehållna.'
+        'footer.text': '© 2024 Arya Tech. Alla rättigheter förbehållna.'
     }
 };
 

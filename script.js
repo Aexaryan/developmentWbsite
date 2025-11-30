@@ -4,7 +4,7 @@ let currentLang = localStorage.getItem('language') || 'en';
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
     setLanguage(currentLang);
-    
+
     // Add event listeners to language buttons (navbar and footer)
     document.querySelectorAll('.lang-btn, .lang-btn-footer').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize scroll animations
     initScrollAnimations();
-    
+
     // Navbar scroll effect
     initNavbarScroll();
 
@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
 function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
     let lastScroll = 0;
-    
+
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
-        
+
         if (currentScroll > 100) {
             navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
             navbar.style.padding = '0.8rem 0';
@@ -66,7 +66,7 @@ function initNavbarScroll() {
             navbar.style.boxShadow = 'none';
             navbar.style.padding = '1rem 0';
         }
-        
+
         lastScroll = currentScroll;
     });
 }
@@ -168,7 +168,7 @@ function initScrollAnimations() {
         section.style.opacity = '0';
         section.style.transform = 'translateY(30px)';
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        
+
         const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -178,7 +178,7 @@ function initScrollAnimations() {
                 }
             });
         }, { threshold: 0.1 });
-        
+
         sectionObserver.observe(section);
     });
 }
@@ -186,7 +186,7 @@ function initScrollAnimations() {
 function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('language', lang);
-    
+
     // Update active language button (navbar and footer)
     document.querySelectorAll('.lang-btn, .lang-btn-footer').forEach(btn => {
         btn.classList.remove('active');
@@ -194,7 +194,7 @@ function setLanguage(lang) {
             btn.classList.add('active');
         }
     });
-    
+
     // Update HTML lang attribute and direction
     document.documentElement.lang = lang;
     if (lang === 'fa') {
@@ -202,7 +202,7 @@ function setLanguage(lang) {
     } else {
         document.documentElement.dir = 'ltr';
     }
-    
+
     // Update all translatable elements
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
@@ -210,24 +210,24 @@ function setLanguage(lang) {
             element.textContent = translations[lang][key];
         }
     });
-    
+
     // Update page title and meta description
     updateMetaTags(lang);
 }
 
 function updateMetaTags(lang) {
     const titles = {
-        en: 'Full Stack Developer | Portfolio',
-        fa: 'توسعه‌دهنده فول استک | پورتفولیو',
-        sv: 'Full Stack Utvecklare | Portfolio'
+        en: 'Arya Tech | Full Stack Developer Portfolio',
+        fa: 'Arya Tech | توسعه‌دهنده فول استک | پورتفولیو',
+        sv: 'Arya Tech | Full Stack Utvecklare Portfolio'
     };
-    
+
     const descriptions = {
-        en: 'Full Stack Developer Portfolio - Specializing in React, Node.js, Cloudflare Workers, Android (Kotlin), and SEO-optimized web solutions',
-        fa: 'پورتفولیو توسعه‌دهنده فول استک - تخصص در React، Node.js، Cloudflare Workers، اندروید (Kotlin) و راه‌حل‌های وب بهینه‌شده برای SEO',
-        sv: 'Full Stack Utvecklare Portfolio - Specialiserad på React, Node.js, Cloudflare Workers, Android (Kotlin) och SEO-optimerade webbplatslösningar'
+        en: 'Arya Tech - Full Stack Developer Portfolio - Specializing in React, Node.js, Cloudflare Workers, Android (Kotlin), and SEO-optimized web solutions',
+        fa: 'Arya Tech - پورتفولیو توسعه‌دهنده فول استک - تخصص در React، Node.js، Cloudflare Workers، اندروید (Kotlin) و راه‌حل‌های وب بهینه‌شده برای SEO',
+        sv: 'Arya Tech - Full Stack Utvecklare Portfolio - Specialiserad på React, Node.js, Cloudflare Workers, Android (Kotlin) och SEO-optimerade webbplatslösningar'
     };
-    
+
     document.title = titles[lang] || titles.en;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

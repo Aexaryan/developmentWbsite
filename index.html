@@ -28,7 +28,7 @@
     <link rel="alternate" hreflang="fa" href="https://yourdomain.com/?lang=fa">
     <link rel="alternate" hreflang="sv" href="https://yourdomain.com/?lang=sv">
 
-    <title>Full Stack Developer | Portfolio - React, Node.js, Cloudflare Workers (Serverless), Android</title>
+    <title>Arya Tech | Full Stack Developer Portfolio - React, Node.js, Cloudflare Workers (Serverless), Android</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -81,7 +81,7 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Full Stack Developer Portfolio",
+      "name": "Arya Tech",
       "url": "https://yourdomain.com",
       "description": "Professional full stack developer portfolio showcasing React, Node.js, Cloudflare Workers (Serverless), and Android development projects",
       "inLanguage": ["en", "fa", "sv"],
@@ -97,6 +97,7 @@
 <body>
     <nav class="navbar">
         <div class="container">
+            <a href="#home" class="nav-brand">Arya Tech</a>
             <ul class="nav-menu">
                 <li><a href="#home" data-i18n="nav.home">Home</a></li>
                 <li><a href="#about" data-i18n="nav.about">About</a></li>
@@ -487,57 +488,136 @@
                 <h2 data-i18n="contact.title">Get In Touch</h2>
                 <p data-i18n="contact.description">We are available for freelance projects and full-time opportunities.
                     Let's discuss how we can help bring your ideas to life.</p>
-                <div class="contact-info">
-                    <p data-i18n="contact.email1">Email: alexander.aryanfar@gmail.com</p>
-                    <p data-i18n="contact.email2">Email: hamed.aryanfar@gmail.com</p>
-                    <p><span data-i18n="contact.phone.canada.label">Canada Phone:</span> <span dir="ltr"
-                            data-i18n="contact.phone.canada.number">+1 705 970 0443</span></p>
-                    <p><span data-i18n="contact.phone.sweden.label">Sweden Phone:</span> <span dir="ltr"
-                            data-i18n="contact.phone.sweden.number">+46 70 645 42 11</span></p>
-                    <p data-i18n="contact.available" class="availability">Available for new projects</p>
+
+                <div class="contact-grid">
+                    <!-- Alexander -->
+                    <div class="contact-card">
+                        <div class="contact-avatar">
+                            <img src="images/team/hamed.png" alt="Alexander Aryanfar">
+                        </div>
+                        <h3>Alexander Aryanfar</h3>
+                        <p class="contact-role" data-i18n="contact.role">Full Stack Developer</p>
+
+                        <div class="contact-details">
+                            <a href="mailto:alexander.aryanfar@gmail.com" class="contact-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                                alexander.aryanfar@gmail.com
+                            </a>
+                            <a href="tel:+17059700443" class="contact-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                                <span dir="ltr" data-i18n="contact.phone.canada.number">+1 705 970 0443</span>
+                            </a>
+                        </div>
+
+                        <a href="https://www.linkedin.com/in/alexander-aryanfar-72ba799a/" target="_blank"
+                            class="btn-linkedin" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                            <span data-i18n="contact.linkedin">Connect on LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <!-- Hamed -->
+                    <div class="contact-card">
+                        <div class="contact-avatar">
+                            <img src="images/team/hamed.jpg" alt="Hamed Aryanfar">
+                        </div>
+                        <h3>Hamed Aryanfar</h3>
+                        <p class="contact-role" data-i18n="contact.role">Full Stack Developer</p>
+
+                        <div class="contact-details">
+                            <a href="mailto:hamed.aryanfar@gmail.com" class="contact-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                                hamed.aryanfar@gmail.com
+                            </a>
+                            <a href="tel:+46706454211" class="contact-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                                <span dir="ltr" data-i18n="contact.phone.sweden.number">+46 70 645 42 11</span>
+                            </a>
+                        </div>
+
+                        <a href="https://www.linkedin.com/in/hamed-aryanfar-258673195/" target="_blank"
+                            class="btn-linkedin" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                            <span data-i18n="contact.linkedin">Connect on LinkedIn</span>
+                        </a>
+                    </div>
                 </div>
+
+                <p data-i18n="contact.available" class="availability" style="margin-top: 2rem;">Available for new
+                    projects</p>
             </div>
         </section>
-    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-language-switcher">
-                    <button class="lang-btn-footer active" data-lang="en" aria-label="English">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="20" height="15">
-                            <path fill="#012169" d="M0 0h640v480H0z" />
-                            <path fill="#FFF"
-                                d="M75 0l244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-179L0 62V0h75z" />
-                            <path fill="#C8102E"
-                                d="M424 281l216 159v40L369 281h55zm-184 20l6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z" />
-                            <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z" />
-                            <path fill="#C8102E" d="M0 190v100h640V190H0zM271 0v480h100V0H271z" />
-                        </svg>
-                    </button>
-                    <button class="lang-btn-footer" data-lang="fa" aria-label="Farsi">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="20" height="15">
-                            <path fill="#239f40" d="M0 0h640v160H0z" />
-                            <path fill="#fff" d="M0 160h640v160H0z" />
-                            <path fill="#da0000" d="M0 320h640v160H0z" />
-                            <path fill="#da0000"
-                                d="M320 264c-13.3 0-25.2-4.5-34.6-12 11.6 5.3 24.6 8.3 38.3 8.3 11.9 0 23.3-2.3 33.8-6.4-9.9 6.3-21.7 10.1-34.3 10.1h-3.2zm-4.3-33.6c-11.8 0-22.7-3.4-32.1-9.3 10.9 4.6 22.9 7.2 35.5 7.2 10.8 0 21.2-1.9 30.8-5.3-9.2 4.8-19.7 7.4-30.8 7.4h-3.4zM320 184c19.6 0 37.8 6.1 53 16.6-15.6-7.8-33.3-12.2-52-12.2-17.6 0-34.3 3.9-49.2 10.9 14.1-9.5 30.9-15.3 49-15.3h-.8z" />
-                        </svg>
-                    </button>
-                    <button class="lang-btn-footer" data-lang="sv" aria-label="Swedish">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="20" height="15">
-                            <path fill="#006aa7" d="M0 0h640v480H0z" />
-                            <path fill="#fecc00" d="M176 0v480h96V0h-96zM0 192v96h640v-96H0z" />
-                        </svg>
-                    </button>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-container">
+                    <a href="#home" class="footer-brand">Arya Tech</a>
+
+                    <div class="footer-links">
+                        <a href="#home" data-i18n="nav.home">Home</a>
+                        <a href="#about" data-i18n="nav.about">About</a>
+                        <a href="#projects" data-i18n="nav.projects">Projects</a>
+                        <a href="#creative" data-i18n="nav.creative">Creative Services</a>
+                        <a href="#contact" data-i18n="nav.contact">Contact</a>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p class="footer-copyright" data-i18n="footer.text">&copy; 2024 Arya Tech. All rights reserved.
+                        </p>
+
+                        <div class="footer-language-switcher">
+                            <button class="lang-btn-footer active" data-lang="en" aria-label="English">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="20" height="15">
+                                    <path fill="#012169" d="M0 0h640v480H0z" />
+                                    <path fill="#FFF"
+                                        d="M75 0l244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-179L0 62V0h75z" />
+                                    <path fill="#C8102E"
+                                        d="M424 281l216 159v40L369 281h55zm-184 20l6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z" />
+                                    <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z" />
+                                    <path fill="#C8102E" d="M0 190v100h640V190H0zM271 0v480h100V0H271z" />
+                                </svg>
+                            </button>
+                            <button class="lang-btn-footer" data-lang="fa" aria-label="Farsi">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="20" height="15">
+                                    <path fill="#239f40" d="M0 0h640v160H0z" />
+                                    <path fill="#fff" d="M0 160h640v160H0z" />
+                                    <path fill="#da0000" d="M0 320h640v160H0z" />
+                                    <path fill="#da0000"
+                                        d="M320 264c-13.3 0-25.2-4.5-34.6-12 11.6 5.3 24.6 8.3 38.3 8.3 11.9 0 23.3-2.3 33.8-6.4-9.9 6.3-21.7 10.1-34.3 10.1h-3.2zm-4.3-33.6c-11.8 0-22.7-3.4-32.1-9.3 10.9 4.6 22.9 7.2 35.5 7.2 10.8 0 21.2-1.9 30.8-5.3-9.2 4.8-19.7 7.4-30.8 7.4h-3.4zM320 184c19.6 0 37.8 6.1 53 16.6-15.6-7.8-33.3-12.2-52-12.2-17.6 0-34.3 3.9-49.2 10.9 14.1-9.5 30.9-15.3 49-15.3h-.8z" />
+                                </svg>
+                            </button>
+                            <button class="lang-btn-footer" data-lang="sv" aria-label="Swedish">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="20" height="15">
+                                    <path fill="#006aa7" d="M0 0h640v480H0z" />
+                                    <path fill="#fecc00" d="M176 0v480h96V0h-96zM0 192v96h640v-96H0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <p data-i18n="footer.text">&copy; 2024 Full Stack Developer Portfolio. All rights reserved.</p>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="translations.js"></script>
-    <script src="script.js"></script>
+        <script src="translations.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

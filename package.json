@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-website",
+  "name": "arya-tech-portfolio",
   "version": "1.0.0",
-  "description": "Professional portfolio website for full stack developer",
+  "description": "Professional portfolio website for Arya Tech",
   "main": "index.html",
   "scripts": {
     "start": "npx serve ."
@@ -9,9 +9,9 @@
   "keywords": [
     "portfolio",
     "full-stack",
-    "developer"
+    "developer",
+    "arya-tech"
   ],
-  "author": "",
+  "author": "Arya Tech",
   "license": "MIT"
 }
-

@@ -1,6 +1,6 @@
-# Full Stack Developer Portfolio
+# Arya Tech Portfolio
 
-A professional, minimal portfolio website built with pure HTML, CSS, and JavaScript. Features multi-language support (English, Farsi, Swedish), SEO optimization, and a clean black and white design.
+A professional, minimal portfolio website for Arya Tech, built with pure HTML, CSS, and JavaScript. Features multi-language support (English, Farsi, Swedish), SEO optimization, and a clean black and white design.
 
 ## Features
 
